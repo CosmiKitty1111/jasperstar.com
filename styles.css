@@ -1,0 +1,36 @@
+body {
+    background-color: green;
+    margin: 0;
+}
+
+.wrapper {
+    margin: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: auto;
+}
+
+header, footer {
+    background-color: orange;
+    height: 42px;
+}
+
+.main {
+    background-color: beige;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: calc(100vh - 84px);
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
