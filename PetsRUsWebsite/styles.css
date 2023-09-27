@@ -1,0 +1,342 @@
+h1 {
+  text-align: center;
+  /* font-size: 500%; */
+  font-size: 5em;
+  text-decoration: underline;
+  color: #129912;
+  margin: 0;
+}
+
+a img {
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+a img:hover {
+  opacity: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: #06C;
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+
+
+}
+
+a:hover:not(li a, img) {
+  color: #C3C;
+}
+
+/* ------------------------ Home Banner ------------------------ */
+
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.banner a {
+  width: 100%;
+}
+
+.banner a img {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------ End Of Home Banner ------------------------ */
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.centerText {
+  text-align: center;
+}
+
+body {
+  background-color: yellowgreen;
+}
+
+#wrapper {
+  font-family: sans-serif;
+  width: 1000px;
+  margin: auto;
+  padding: 10px;
+  color: black;
+  background-color: burlywood;
+  border: #129912 groove 20px;
+}
+
+header {
+  background-color: #f89e01;
+  border: #111 solid;
+  padding: 15px 15px;
+  margin: 0 100px 20px 100px;
+}
+
+/* ------------------------ Navbar ------------------------ */
+.flexContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#logo img {
+  height: 80px;
+  width: auto;
+  margin-right: 15px;
+  /* padding-top: 16px;
+    padding-bottom: 12px; */
+  /* padding-top: 4px; */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.cartNav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active, img) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #129912;
+}
+
+/* ------------------------ Footer ------------------------ */
+
+footer {
+  display: flex;
+  text-align: center;
+  background-color: #f89e01;
+  border: #111 solid;
+  padding: 10px;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+footer div {
+  margin: 0 auto;
+}
+
+footer h3 {
+  margin: auto;
+  font-size: 1em;
+}
+
+footer p {
+  margin: auto;
+  font-size: 1em;
+}
+
+#validCSS {
+  align-self: center;
+}
+
+/* ------------------------ End Of Footer ------------------------ */
+
+/* ------------------------ Adopt Page ------------------------ */
+
+#adoptContainer h2 {
+  text-align: center;
+}
+
+.adoptPetInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.adoptPetInfo p,
+.adoptPetInfo img {
+  width: 45%;
+  height: auto;
+}
+
+/* ------------------------ Adopt Form ------------------------ */
+
+#adoptContainer form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+#adoptContainer .form p,
+#adoptContainer .form label {
+  font-size: 18px;
+}
+
+#adoptContainer .breed label,
+.paymentForm label {
+  margin: 0px 20px;
+}
+
+.radiosForm {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #259913;
+  color: white;
+  font-size: large;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* ------------------------ End Of Adopt Form ------------------------ */
+
+/* ------------------------ End Of Adopt Page ------------------------ */
+
+
+/* ------------------------ Tables ------------------------ */
+
+.table h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+.table p {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  background-color: #33c433;
+}
+
+tr td:first-of-type,
+tr th {
+  font-weight: bold;
+  background-color: #129912;
+  color: #fff;
+}
+
+.table td:not(tr td:first-of-type),
+.table th:not(th:first-of-type) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ------------------------ Checkbox ------------------------ */
+
+.checkboxForm input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+/* ------------------------ End of Checkbox ------------------------ */
+
+/* ------------------------ End of Tables ------------------------ */
+
+/* ------------------------ Shopping Cart Page ------------------------ */
+/* ------------------------ Shopping Cart Form ------------------------ */
+
+
+
+.paymentForm {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.checkboxes input[type=checkbox] {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.checkboxes label {
+  font-size: 1.2em;
+}
+
+/* ------------------------ End Of Shopping Cart Form ------------------------ */
+/* ------------------------ End Of Shopping Cart Page ------------------------ */
+
+
+
+
+
+/* ------------------------ @Media ------------------------ */
+
+@media only screen and (max-width: 1080px) {
+  #wrapper {
+    width: auto;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 732px) {
+  #wrapper {
+    width: 642px;
+    margin: auto;
+  }
+}
