@@ -1,113 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pets R Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrapper">
-        <header>
-            <nav class="flexContainer">
-                <div id="logo">
-                    <a href="index.html">
-                        <img src="Images/Logo.png" alt="Logo">
-                    </a>
-                </div>
-                <div class="flexNav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="adopt.html">Adopt</a></li>
-                        <li><a href="food.html">Pet Food</a></li>
-                    </ul>
-                </div>
-                <div class="cartNav">
-                    <ul>
-                        <li><a class="active" href="cart.html">Cart</a></li>
-                    </ul>
-                </div>
-            </nav>
+      <header>
+        <nav class="flexContainer">
+          <div id="logo">
+            <a href="index.html">
+              <img src="Images/Logo.png" alt="Logo" />
+            </a>
+          </div>
+          <div class="flexNav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="adopt.html">Adopt</a></li>
+              <li><a href="food.html">Pet Food</a></li>
+            </ul>
+          </div>
+          <div class="cartNav">
+            <ul>
+              <li><a class="active" href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+        </nav>
 
-            <h1>Shopping Cart</h1>
-        </header>
-        <div id="content">
-            <div class="form">
-                <form action="index.html">
-                    <h2 class="centerText">Please Provide your Details:</h2>
-                    <div class="paymentForm">
-                        <div class="personalDetails">
-                            <label for="fName">First Name:</label><br>
-                            <input type="text" id="fName" name="fName" placeholder="First Name" required>
-                            <label for="lName">Last Name</label>
-                            <input type="text" id="lName" name="lName" placeholder="Last Name">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="paymentDetails">
-                            <label for="cardNum">Credit Card Number:</label>
-                            <input type="text" id="cardNum" name="cardNum" placeholder="16-Digit Number" minlength="16"
-                                maxlength="16" required>
-                            <label for="expiryDate">Expiry Date:</label>
-                            <input type="text" id="expiryDate" name="expiryDate" placeholder="mm/yy" minlength="5"
-                                maxlength="5" required>
-                            <label for="cvv">CVV:</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="3-Digit Number" minlength="3"
-                                maxlength="3" required>
-                        </div>
-                    </div>
-                    <div class="checkboxes">
-                        <div class="termsConditionsCheckbox">
-                            <input type="checkbox" id="termsConditionsBox" name="termsConditionsBox" required>
-                            <label for="termsConditionsBox">I agree to all nonexistant terms and conditions and
-                                understand
-                                that this website <strong>DOES NOT</strong> really sell anything.</label>
-                        </div>
-                        <div class="newsletterCheckbox">
-                            <input type="checkbox" id="newsletterBox" name="newsletterBox" checked>
-                            <label for="newsletterBox">I would like to receive nonexistant newsletters.</label>
-                        </div>
-                    </div>
-                    <div class="submit">
-                        <input type="submit" value="Finalise Payment">
-                    </div>
-                </form>
+        <h1>Shopping Cart</h1>
+      </header>
+      <div id="content">
+        <div class="form">
+          <form action="index.html">
+            <h2 class="centerText">Please Provide your Details:</h2>
+            <div class="paymentForm">
+              <div class="personalDetails">
+                <label for="fName">First Name:</label><br />
+                <input
+                  type="text"
+                  id="fName"
+                  name="fName"
+                  placeholder="First Name"
+                  required
+                />
+                <label for="lName">Last Name</label>
+                <input
+                  type="text"
+                  id="lName"
+                  name="lName"
+                  placeholder="Last Name"
+                />
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="paymentDetails">
+                <label for="cardNum">Credit Card Number:</label>
+                <input
+                  type="text"
+                  id="cardNum"
+                  name="cardNum"
+                  placeholder="16-Digit Number"
+                  minlength="16"
+                  maxlength="16"
+                  required
+                />
+                <label for="expiryDate">Expiry Date:</label>
+                <input
+                  type="text"
+                  id="expiryDate"
+                  name="expiryDate"
+                  placeholder="mm/yy"
+                  minlength="5"
+                  maxlength="5"
+                  required
+                />
+                <label for="cvv">CVV:</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  placeholder="3-Digit Number"
+                  minlength="3"
+                  maxlength="3"
+                  required
+                />
+              </div>
             </div>
+            <div class="checkboxes">
+              <div class="termsConditionsCheckbox">
+                <input
+                  type="checkbox"
+                  id="termsConditionsBox"
+                  name="termsConditionsBox"
+                  required
+                />
+                <label for="termsConditionsBox"
+                  >I agree to all nonexistant terms and conditions and
+                  understand that this website <strong>DOES NOT</strong> really
+                  sell anything.</label
+                >
+              </div>
+              <div class="newsletterCheckbox">
+                <input
+                  type="checkbox"
+                  id="newsletterBox"
+                  name="newsletterBox"
+                  checked
+                />
+                <label for="newsletterBox"
+                  >I would like to receive nonexistant newsletters.</label
+                >
+              </div>
+            </div>
+            <div class="submit">
+              <input type="submit" value="Finalise Payment" />
+            </div>
+          </form>
         </div>
-        <footer>
-            <div id="validCSS">
-                <p>
-                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                        <img style="border:0;width:88px;height:31px"
-                            src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
-                    </a>
-                </p>
-            </div>
-            <div id="contact">
-                <h3>Contact Us</h3>
-                <p>
-                    <a
-                        href="mailto:info@petsrus.com?cc=jasper.star@outlook.com&subject=Inquiry&body=Dear%20Pets%20R%20Us,">info@petsrus.com</a><br>
-                    <a href="tel:0742069420">07 4206 9420</a>
-                </p>
-            </div>
-            <div id="motto">
-                <h3>Our Motto</h3>
-                <p>We are on a mission<br>to give every potential<br>pet a fur-ever family.</p>
-            </div>
-            <div id="visit">
-                <h3>Visit Us</h3>
-                <p>
-                    <a href="https://www.google.com/maps/place/Queensland" target="_blank">314 Awesome Ave,<br>
-                        Cloudy Cove, QLD, 1772</a>
-                </p>
-            </div>
-        </footer>
+      </div>
+      <footer id="pageFooter"></footer>
     </div>
-</body>
-
+  </body>
 </html>
