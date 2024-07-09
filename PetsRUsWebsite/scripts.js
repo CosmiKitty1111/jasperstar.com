@@ -1,15 +1,15 @@
 void (async function () {
-  //get the imported document in templates:
-  var templates = document.createElement("template");
+  // Get the imported document in templates:
+  let templates = document.createElement("template");
   templates.innerHTML = await (await fetch("templates.html")).text();
 
-  //fetch header and footer templates:
-  var header = templates.content.querySelector("#header");
-  var footer = templates.content.querySelector("#footer");
-  var headerClone = header.content.cloneNode(true);
-  var footerClone = footer.content.cloneNode(true);
+  // Fetch header and footer templates:
+  let header = templates.content.querySelector("#header");
+  let footer = templates.content.querySelector("#footer");
+  let headerClone = header.content.cloneNode(true);
+  let footerClone = footer.content.cloneNode(true);
 
-  //append the templates onto the page:
+  // Append the templates onto the page:
   try {
     document.getElementById("pageHeader").appendChild(headerClone);
   } catch (e) {
@@ -17,7 +17,31 @@ void (async function () {
   }
   try {
     document.getElementById("pageFooter").appendChild(footerClone);
-} catch (e) {
+  } catch (e) {
     console.error("Cannot append footer template.\n" + e.message);
   }
+
+
+  // Get current page URL
+  let url = window.location.pathname;
+  let filename = url.substring(url.lastIndexOf("/") + 1);
+
+  // If file name not available, set default to 'index.html'
+  if (filename == "") {
+    filename = "index.html";
+  }
+  console.log(filename);
+  // Get all nav links
+  const navItems = document.querySelectorAll(".flexNav li a, .cartNav li a");
+
+  // Loop through all links
+  navItems.forEach((navItem) => {
+    let linkPath = navItem.pathname;
+    let linkFilename = linkPath.substring(linkPath.lastIndexOf("/") + 1);
+    // Check if link is active
+    if (filename === linkFilename) {
+      // Add 'active' class
+      navItem.classList.add("active");
+    }
+  });
 })();
