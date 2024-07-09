@@ -1,4 +1,5 @@
 void (async function () {
+  // -- Add section templates to the page --
   // Get the imported document in templates:
   let templates = document.createElement("template");
   templates.innerHTML = await (await fetch("templates.html")).text();
@@ -21,6 +22,7 @@ void (async function () {
     console.error("Cannot append footer template.\n" + e.message);
   }
 
+  // -- Highlight relevant navbar item dynamically --
 
   // Get current page URL
   let url = window.location.pathname;
