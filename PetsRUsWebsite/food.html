@@ -1,178 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pets R Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrapper">
-        <header>
-            <nav class="flexContainer">
-                <div id="logo">
-                    <a href="index.html">
-                        <img src="Images/Logo.png" alt="Logo">
-                    </a>
-                </div>
-                <div class="flexNav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="adopt.html">Adopt</a></li>
-                        <li><a class="active" href="food.html">Pet Food</a></li>
-                    </ul>
-                </div>
-                <div class="cartNav">
-                    <ul>
-                        <li><a href="cart.html">Cart</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <h1>Pet Food</h1>
-        </header>
-        <div id="content">
-            <div class="table" id="foodPriceTable">
-                <h2>
-                    Pet Food Prices*
-                </h2>
-                <table>
-                    <tr>
-                        <th>Size</th>
-                        <th>Cat</th>
-                        <th>Dog</th>
-                        <th>Bird</th>
-                        <th>Fish</th>
-                    </tr>
-                    <tr>
-                        <td>Small</td>
-                        <td>$49.99</td>
-                        <td>$59.99</td>
-                        <td>$19.99</td>
-                        <td>$9.99</td>
-                    </tr>
-                    <tr>
-                        <td>Medium</td>
-                        <td>$89.99</td>
-                        <td>$102.99</td>
-                        <td>$36.99</td>
-                        <td>$18.99</td>
-                    </tr>
-                    <tr>
-                        <td>Large</td>
-                        <td>$139.99</td>
-                        <td>$164.99</td>
-                        <td>$54.99</td>
-                        <td>$27.99</td>
-                    </tr>
-                </table>
-                <p>*All Prices are listed in Australian Dollars (AUD).</p>
-            </div>
-            <div class="table" id="foodSelectTable">
-                <h2>
-                    Select Pet Food For Purchase
-                </h2>
-
-                <div class="form">
-                    <form action="cart.html">
-                        <div class="checkboxForm">
-                            <table>
-                                <tr>
-                                    <th>Size</th>
-                                    <th>Cat</th>
-                                    <th>Dog</th>
-                                    <th>Bird</th>
-                                    <th>Fish</th>
-                                </tr>
-                                <tr>
-                                    <td>Small</td>
-                                    <td>
-                                        <input type="checkbox" id="catSmall" name="catSmall" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="dogSmall" name="dogSmall" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="birdSmall" name="birdSmall" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="fishSmall" name="fishSmall" value="true">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Medium</td>
-                                    <td>
-                                        <input type="checkbox" id="catMedium" name="catMedium" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="dogMedium" name="dogMedium" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="birdMedium" name="birdMedium" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="fishMedium" name="fishMedium" value="true">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Large</td>
-                                    <td>
-                                        <input type="checkbox" id="catLarge" name="catLarge" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="dogLarge" name="dogLarge" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="birdLarge" name="birdLarge" value="true">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="fishLarge" name="fishLarge" value="true">
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="submit">
-                            <input type="submit" value="Add To Cart">
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-            <footer>
-                <div id="validCSS">
-                    <p>
-                        <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                            <img style="border:0;width:88px;height:31px"
-                                src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
-                        </a>
-                    </p>
-                </div>
-                <div id="contact">
-                    <h3>Contact Us</h3>
-                    <p>
-                        <a
-                            href="mailto:info@petsrus.com?cc=jasper.star@outlook.com&subject=Inquiry&body=Dear%20Pets%20R%20Us,">info@petsrus.com</a><br>
-                        <a href="tel:0742069420">07 4206 9420</a>
-                    </p>
-                </div>
-                <div id="motto">
-                    <h3>Our Motto</h3>
-                    <p>We are on a mission<br>to give every potential<br>pet a fur-ever family.</p>
-                </div>
-                <div id="visit">
-                    <h3>Visit Us</h3>
-                    <p>
-                        <a href="https://www.google.com/maps/place/Queensland" target="_blank">314 Awesome Ave,<br>
-                            Cloudy Cove, QLD, 1772</a>
-                    </p>
-                </div>
-            </footer>
+      <header id="pageHeader"></header>
+      <div id="content">
+        <div class="table" id="foodPriceTable">
+          <h2>Pet Food Prices*</h2>
+          <table>
+            <tr>
+              <th>Size</th>
+              <th>Cat</th>
+              <th>Dog</th>
+              <th>Bird</th>
+              <th>Fish</th>
+            </tr>
+            <tr>
+              <td>Small</td>
+              <td>$49.99</td>
+              <td>$59.99</td>
+              <td>$19.99</td>
+              <td>$9.99</td>
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>$89.99</td>
+              <td>$102.99</td>
+              <td>$36.99</td>
+              <td>$18.99</td>
+            </tr>
+            <tr>
+              <td>Large</td>
+              <td>$139.99</td>
+              <td>$164.99</td>
+              <td>$54.99</td>
+              <td>$27.99</td>
+            </tr>
+          </table>
+          <p>*All Prices are listed in Australian Dollars (AUD).</p>
         </div>
-    </div>
-</body>
+        <div class="table" id="foodSelectTable">
+          <h2>Select Pet Food For Purchase</h2>
 
+          <div class="form">
+            <form action="cart.html">
+              <div class="checkboxForm">
+                <table>
+                  <tr>
+                    <th>Size</th>
+                    <th>Cat</th>
+                    <th>Dog</th>
+                    <th>Bird</th>
+                    <th>Fish</th>
+                  </tr>
+                  <tr>
+                    <td>Small</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="catSmall"
+                        name="catSmall"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="dogSmall"
+                        name="dogSmall"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="birdSmall"
+                        name="birdSmall"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="fishSmall"
+                        name="fishSmall"
+                        value="true"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Medium</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="catMedium"
+                        name="catMedium"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="dogMedium"
+                        name="dogMedium"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="birdMedium"
+                        name="birdMedium"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="fishMedium"
+                        name="fishMedium"
+                        value="true"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Large</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="catLarge"
+                        name="catLarge"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="dogLarge"
+                        name="dogLarge"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="birdLarge"
+                        name="birdLarge"
+                        value="true"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id="fishLarge"
+                        name="fishLarge"
+                        value="true"
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="submit">
+                <input type="submit" value="Add To Cart" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <footer id="pageFooter"></footer>
+      </div>
+    </div>
+  </body>
 </html>
