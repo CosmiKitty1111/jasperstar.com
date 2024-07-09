@@ -1,278 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pets R Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrapper">
-        <header>
-            <nav class="flexContainer">
-                <div id="logo">
-                    <a href="index.html">
-                        <img src="Images/Logo.png" alt="Logo">
-                    </a>
-                </div>
-                <div class="flexNav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a class="active" href="adopt.html">Adopt</a></li>
-                        <li><a href="food.html">Pet Food</a></li>
-                    </ul>
-                </div>
-                <div class="cartNav">
-                    <ul>
-                        <li><a href="cart.html">Cart</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <h1>Adopt</h1>
-        </header>
-        <div id="content">
-            <div id="adoptContainer">
-                <div id="catBox">
-                    <h2>
-                        Cats
-                    </h2>
-                    <div class="adoptPetInfo">
-                        <img src="Images/Cat.jpg" alt="Cat that wants to be loved">
-                        <p>
-                            Cuddly, soft and playful. Great companions that will always bring a smile to your face. We
-                            currently have female and male <a
-                                href="https://en.wikipedia.org/wiki/Domestic_short-haired_cat" target="_blank">Domestic
-                                Shorthair</a>, <a href="https://en.wikipedia.org/wiki/Ragdoll"
-                                target="_blank">Ragdoll</a>, <a href="https://en.wikipedia.org/wiki/Maine_Coon"
-                                target="_blank"> Maine Coon</a> and <a href="https://en.wikipedia.org/wiki/Persian_cat"
-                                target="_blank"> Persian</a> kittens and adult cats that are all vet checked,
-                            microchipped, flee'd, wormed, and vaccinated waiting to be welcomed into their forever home.
-                        </p>
-                    </div>
-                    <div class="form">
-                        <form action="cart.html">
-                            <div class="breed">
-                                <label for="catBreed">Breed:</label>
-                                <select id="catBreed" name="catBreed">
-                                    <option value="">--Please choose a Breed--</option>
-                                    <option value="domesticShorthair">Domestic Shorthair - AU$180</option>
-                                    <option value="ragdoll">Ragdoll - AU$600</option>
-                                    <option value="maineCoon">Maine Coon - AU$800</option>
-                                    <option value="persian">Persian - AU$600</option>
-                                </select>
-                            </div>
-                            <div class="radiosForm">
-                                <div class="gender">
-                                    <p>Please Select the Gender:</p>
-                                    <input type="radio" id="catMale" name="catGender" value="catMale">
-                                    <label for="catMale">Male</label><br>
-                                    <input type="radio" id="catFemale" name="catGender" value="catFemale">
-                                    <label for="catFemale">Female</label>
-                                </div>
-                                <div class="age">
-                                    <p>Please Select the Age:</p>
-                                    <input type="radio" id="catBaby" name="catAge" value="catBaby">
-                                    <label for="catBaby">Kitten</label><br>
-                                    <input type="radio" id="catAdult" name="catAge" value="catAdult">
-                                    <label for="catAdult">Adult</label>
-                                </div>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="Add To Cart">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="dogBox">
-                    <h2>
-                        Dogs
-                    </h2>
-                    <div class="adoptPetInfo">
-                        <img src="Images/Dog.jpg" alt="Dog that wants to be loved">
-                        <p>Our rescue dogs come in all shapes and sizes from puppy to adult and are waiting for their
-                            loving fur-ever home. Whether you looking to Adopt a smaller breed that is suited to indoors
-                            or the larger breeds that require a larger outdoor space. All our dogs have been vet
-                            checked, microchipped, flee'd, wormed, and vaccinated and are just waiting for their loving
-                            forever home. Currently we have available male and female <a
-                                href="https://en.wikipedia.org/wiki/Maltese_dog" target="_blank">Maltese</a>, <a
-                                href="https://en.wikipedia.org/wiki/Pug" target="_blank">Pug</a>, <a
-                                href="https://en.wikipedia.org/wiki/Poodle" target="_blank">Poodle</a> and <a
-                                href="https://en.wikipedia.org/wiki/Labrador_Retriever" target="_blank">Labrador</a>
-                            puppies and adults.
-                        </p>
-                    </div>
-                    <div class="form">
-                        <form action="cart.html">
-                            <div class="breed">
-                                <label for="dogBreed">Breed:</label>
-                                <select id="dogBreed" name="dogBreed">
-                                    <option value="">--Please choose a Breed--</option>
-                                    <option value="maltese">Maltese - AU$300</option>
-                                    <option value="pug">Pug - AU$700</option>
-                                    <option value="poodle">Poodle - AU$750</option>
-                                    <option value="labrador">Labrador - AU$500</option>
-                                </select>
-                            </div>
-                            <div class="radiosForm">
-                                <div class="gender">
-                                    <p>Please Select the Gender:</p>
-                                    <input type="radio" id="dogMale" name="dogGender" value="dogMale">
-                                    <label for="dogMale">Male</label><br>
-                                    <input type="radio" id="dogFemale" name="dogGender" value="dogFemale">
-                                    <label for="dogFemale">Female</label>
-                                </div>
-                                <div class="age">
-                                    <p>Please Select the Age:</p>
-                                    <input type="radio" id="dogBaby" name="dogAge" value="dogBaby">
-                                    <label for="dogBaby">Puppy</label><br>
-                                    <input type="radio" id="dogAdult" name="dogAge" value="dogAdult">
-                                    <label for="dogAdult">Adult</label>
-                                </div>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="Add To Cart">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="birdBox">
-                    <h2>
-                        Birds
-                    </h2>
-                    <div class="adoptPetInfo">
-                        <img src="Images/Bird.jpg" alt="Bird that wants to be loved">
-                        <p>
-                            Birds bring a sweet sound and melody into your home. By adopting one or a pair of our loving
-                            male or/and female <a href="https://en.wikipedia.org/wiki/Cockatiel"
-                                target="_blank">Cockatiels</a>, <a href="https://en.wikipedia.org/wiki/Budgerigar"
-                                target="_blank">Budgerigars</a>, <a href="https://en.wikipedia.org/wiki/Galah"
-                                target="_blank">Galahs</a> or <a href="https://en.wikipedia.org/wiki/Finch"
-                                target="_blank">Finches</a> your home will be filled with sweet sounds of happiness that
-                            bring joy to your heart.
-                        </p>
-                    </div>
-                    <div class="form">
-                        <form action="cart.html">
-                            <div class="breed">
-                                <label for="birdBreed">Breed:</label>
-                                <select id="birdBreed" name="birdBreed">
-                                    <option value="">--Please choose a Breed--</option>
-                                    <option value="cockatiel">Cockatiel - AU$120</option>
-                                    <option value="budgerigar">Budgerigar - AU$100</option>
-                                    <option value="galah">Galah - AU$150</option>
-                                    <option value="finch">Finch - AU$80</option>
-                                </select>
-                            </div>
-                            <div class="radiosForm">
-                                <div class="gender">
-                                    <p>Please Select the Gender:</p>
-                                    <input type="radio" id="birdMale" name="birdGender" value="birdMale">
-                                    <label for="birdMale">Male</label><br>
-                                    <input type="radio" id="birdFemale" name="birdGender" value="birdFemale">
-                                    <label for="birdFemale">Female</label>
-                                </div>
-                                <div class="age">
-                                    <p>Please Select the Age:</p>
-                                    <input type="radio" id="birdBaby" name="birdAge" value="birdBaby">
-                                    <label for="birdBaby">Chick</label><br>
-                                    <input type="radio" id="birdAdult" name="birdAge" value="birdAdult">
-                                    <label for="birdAdult">Adult</label>
-                                </div>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="Add To Cart">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="fishBox">
-                    <h2>
-                        Fish
-                    </h2>
-                    <div class="adoptPetInfo">
-                        <img src="Images/Fish.jpg" alt="Fish that wants to be loved">
-                        <p>
-                            Start or add to your family of pet fish by adopting from our many male and female <a
-                                href="https://en.wikipedia.org/wiki/Tetra" target="_blank">Tetras</a>, <a
-                                href="https://en.wikipedia.org/wiki/Guppy" target="_blank">Guppies</a>, <a
-                                href="https://en.wikipedia.org/wiki/Goldfish" target="_blank">Goldfish</a> and <a
-                                href="https://en.wikipedia.org/wiki/Pterophyllum" target="_blank">Angelfish</a>. Adding
-                            colour
-                            and wonder and beautiful energy to your current home environment, whether they live in a
-                            small fish tank, an aquarium or outdoor pond.
-                        </p>
-                    </div>
-                    <div class="form">
-                        <form action="cart.html">
-                            <div class="breed">
-                                <label for="fishBreed">Breed:</label>
-                                <select id="fishBreed" name="fishBreed">
-                                    <option value="">--Please choose a Breed--</option>
-                                    <option value="tetras">Tetras - AU$10</option>
-                                    <option value="guppies">Guppies - AU$5</option>
-                                    <option value="goldfish">Goldfish - AU$7</option>
-                                    <option value="angelfish">Angelfish - AU$20</option>
-                                </select>
-                            </div>
-                            <div class="radiosForm">
-                                <div class="gender">
-                                    <p>Please Select the Gender:</p>
-                                    <input type="radio" id="fishMale" name="fishGender" value="fishMale">
-                                    <label for="fishMale">Male</label><br>
-                                    <input type="radio" id="fishFemale" name="fishGender" value="fishFemale">
-                                    <label for="fishFemale">Female</label>
-                                </div>
-                                <div class="age">
-                                    <p>Please Select the Age:</p>
-                                    <input type="radio" id="fishBaby" name="fishAge" value="fishBaby">
-                                    <label for="fishBaby">Fry</label><br>
-                                    <input type="radio" id="fishAdult" name="fishAge" value="fishAdult">
-                                    <label for="fishAdult">Adult</label>
-                                </div>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="Add To Cart">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+      <header id="pageHeader"></header>
+      <div id="content">
+        <div id="adoptContainer">
+          <div id="catBox">
+            <h2>Cats</h2>
+            <div class="adoptPetInfo">
+              <img src="Images/Cat.jpg" alt="Cat that wants to be loved" />
+              <p>
+                Cuddly, soft and playful. Great companions that will always
+                bring a smile to your face. We currently have female and male
+                <a
+                  href="https://en.wikipedia.org/wiki/Domestic_short-haired_cat"
+                  target="_blank"
+                  >Domestic Shorthair</a
+                >,
+                <a href="https://en.wikipedia.org/wiki/Ragdoll" target="_blank"
+                  >Ragdoll</a
+                >,
+                <a
+                  href="https://en.wikipedia.org/wiki/Maine_Coon"
+                  target="_blank"
+                >
+                  Maine Coon</a
+                >
+                and
+                <a
+                  href="https://en.wikipedia.org/wiki/Persian_cat"
+                  target="_blank"
+                >
+                  Persian</a
+                >
+                kittens and adult cats that are all vet checked, microchipped,
+                flee'd, wormed, and vaccinated waiting to be welcomed into their
+                forever home.
+              </p>
             </div>
+            <div class="form">
+              <form action="cart.html">
+                <div class="breed">
+                  <label for="catBreed">Breed:</label>
+                  <select id="catBreed" name="catBreed">
+                    <option value="">--Please choose a Breed--</option>
+                    <option value="domesticShorthair">
+                      Domestic Shorthair - AU$180
+                    </option>
+                    <option value="ragdoll">Ragdoll - AU$600</option>
+                    <option value="maineCoon">Maine Coon - AU$800</option>
+                    <option value="persian">Persian - AU$600</option>
+                  </select>
+                </div>
+                <div class="radiosForm">
+                  <div class="gender">
+                    <p>Please Select the Gender:</p>
+                    <input
+                      type="radio"
+                      id="catMale"
+                      name="catGender"
+                      value="catMale"
+                    />
+                    <label for="catMale">Male</label><br />
+                    <input
+                      type="radio"
+                      id="catFemale"
+                      name="catGender"
+                      value="catFemale"
+                    />
+                    <label for="catFemale">Female</label>
+                  </div>
+                  <div class="age">
+                    <p>Please Select the Age:</p>
+                    <input
+                      type="radio"
+                      id="catBaby"
+                      name="catAge"
+                      value="catBaby"
+                    />
+                    <label for="catBaby">Kitten</label><br />
+                    <input
+                      type="radio"
+                      id="catAdult"
+                      name="catAge"
+                      value="catAdult"
+                    />
+                    <label for="catAdult">Adult</label>
+                  </div>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Add To Cart" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="dogBox">
+            <h2>Dogs</h2>
+            <div class="adoptPetInfo">
+              <img src="Images/Dog.jpg" alt="Dog that wants to be loved" />
+              <p>
+                Our rescue dogs come in all shapes and sizes from puppy to adult
+                and are waiting for their loving fur-ever home. Whether you
+                looking to Adopt a smaller breed that is suited to indoors or
+                the larger breeds that require a larger outdoor space. All our
+                dogs have been vet checked, microchipped, flee'd, wormed, and
+                vaccinated and are just waiting for their loving forever home.
+                Currently we have available male and female
+                <a
+                  href="https://en.wikipedia.org/wiki/Maltese_dog"
+                  target="_blank"
+                  >Maltese</a
+                >,
+                <a href="https://en.wikipedia.org/wiki/Pug" target="_blank"
+                  >Pug</a
+                >,
+                <a href="https://en.wikipedia.org/wiki/Poodle" target="_blank"
+                  >Poodle</a
+                >
+                and
+                <a
+                  href="https://en.wikipedia.org/wiki/Labrador_Retriever"
+                  target="_blank"
+                  >Labrador</a
+                >
+                puppies and adults.
+              </p>
+            </div>
+            <div class="form">
+              <form action="cart.html">
+                <div class="breed">
+                  <label for="dogBreed">Breed:</label>
+                  <select id="dogBreed" name="dogBreed">
+                    <option value="">--Please choose a Breed--</option>
+                    <option value="maltese">Maltese - AU$300</option>
+                    <option value="pug">Pug - AU$700</option>
+                    <option value="poodle">Poodle - AU$750</option>
+                    <option value="labrador">Labrador - AU$500</option>
+                  </select>
+                </div>
+                <div class="radiosForm">
+                  <div class="gender">
+                    <p>Please Select the Gender:</p>
+                    <input
+                      type="radio"
+                      id="dogMale"
+                      name="dogGender"
+                      value="dogMale"
+                    />
+                    <label for="dogMale">Male</label><br />
+                    <input
+                      type="radio"
+                      id="dogFemale"
+                      name="dogGender"
+                      value="dogFemale"
+                    />
+                    <label for="dogFemale">Female</label>
+                  </div>
+                  <div class="age">
+                    <p>Please Select the Age:</p>
+                    <input
+                      type="radio"
+                      id="dogBaby"
+                      name="dogAge"
+                      value="dogBaby"
+                    />
+                    <label for="dogBaby">Puppy</label><br />
+                    <input
+                      type="radio"
+                      id="dogAdult"
+                      name="dogAge"
+                      value="dogAdult"
+                    />
+                    <label for="dogAdult">Adult</label>
+                  </div>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Add To Cart" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="birdBox">
+            <h2>Birds</h2>
+            <div class="adoptPetInfo">
+              <img src="Images/Bird.jpg" alt="Bird that wants to be loved" />
+              <p>
+                Birds bring a sweet sound and melody into your home. By adopting
+                one or a pair of our loving male or/and female
+                <a
+                  href="https://en.wikipedia.org/wiki/Cockatiel"
+                  target="_blank"
+                  >Cockatiels</a
+                >,
+                <a
+                  href="https://en.wikipedia.org/wiki/Budgerigar"
+                  target="_blank"
+                  >Budgerigars</a
+                >,
+                <a href="https://en.wikipedia.org/wiki/Galah" target="_blank"
+                  >Galahs</a
+                >
+                or
+                <a href="https://en.wikipedia.org/wiki/Finch" target="_blank"
+                  >Finches</a
+                >
+                your home will be filled with sweet sounds of happiness that
+                bring joy to your heart.
+              </p>
+            </div>
+            <div class="form">
+              <form action="cart.html">
+                <div class="breed">
+                  <label for="birdBreed">Breed:</label>
+                  <select id="birdBreed" name="birdBreed">
+                    <option value="">--Please choose a Breed--</option>
+                    <option value="cockatiel">Cockatiel - AU$120</option>
+                    <option value="budgerigar">Budgerigar - AU$100</option>
+                    <option value="galah">Galah - AU$150</option>
+                    <option value="finch">Finch - AU$80</option>
+                  </select>
+                </div>
+                <div class="radiosForm">
+                  <div class="gender">
+                    <p>Please Select the Gender:</p>
+                    <input
+                      type="radio"
+                      id="birdMale"
+                      name="birdGender"
+                      value="birdMale"
+                    />
+                    <label for="birdMale">Male</label><br />
+                    <input
+                      type="radio"
+                      id="birdFemale"
+                      name="birdGender"
+                      value="birdFemale"
+                    />
+                    <label for="birdFemale">Female</label>
+                  </div>
+                  <div class="age">
+                    <p>Please Select the Age:</p>
+                    <input
+                      type="radio"
+                      id="birdBaby"
+                      name="birdAge"
+                      value="birdBaby"
+                    />
+                    <label for="birdBaby">Chick</label><br />
+                    <input
+                      type="radio"
+                      id="birdAdult"
+                      name="birdAge"
+                      value="birdAdult"
+                    />
+                    <label for="birdAdult">Adult</label>
+                  </div>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Add To Cart" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="fishBox">
+            <h2>Fish</h2>
+            <div class="adoptPetInfo">
+              <img src="Images/Fish.jpg" alt="Fish that wants to be loved" />
+              <p>
+                Start or add to your family of pet fish by adopting from our
+                many male and female
+                <a href="https://en.wikipedia.org/wiki/Tetra" target="_blank"
+                  >Tetras</a
+                >,
+                <a href="https://en.wikipedia.org/wiki/Guppy" target="_blank"
+                  >Guppies</a
+                >,
+                <a href="https://en.wikipedia.org/wiki/Goldfish" target="_blank"
+                  >Goldfish</a
+                >
+                and
+                <a
+                  href="https://en.wikipedia.org/wiki/Pterophyllum"
+                  target="_blank"
+                  >Angelfish</a
+                >. Adding colour and wonder and beautiful energy to your current
+                home environment, whether they live in a small fish tank, an
+                aquarium or outdoor pond.
+              </p>
+            </div>
+            <div class="form">
+              <form action="cart.html">
+                <div class="breed">
+                  <label for="fishBreed">Breed:</label>
+                  <select id="fishBreed" name="fishBreed">
+                    <option value="">--Please choose a Breed--</option>
+                    <option value="tetras">Tetras - AU$10</option>
+                    <option value="guppies">Guppies - AU$5</option>
+                    <option value="goldfish">Goldfish - AU$7</option>
+                    <option value="angelfish">Angelfish - AU$20</option>
+                  </select>
+                </div>
+                <div class="radiosForm">
+                  <div class="gender">
+                    <p>Please Select the Gender:</p>
+                    <input
+                      type="radio"
+                      id="fishMale"
+                      name="fishGender"
+                      value="fishMale"
+                    />
+                    <label for="fishMale">Male</label><br />
+                    <input
+                      type="radio"
+                      id="fishFemale"
+                      name="fishGender"
+                      value="fishFemale"
+                    />
+                    <label for="fishFemale">Female</label>
+                  </div>
+                  <div class="age">
+                    <p>Please Select the Age:</p>
+                    <input
+                      type="radio"
+                      id="fishBaby"
+                      name="fishAge"
+                      value="fishBaby"
+                    />
+                    <label for="fishBaby">Fry</label><br />
+                    <input
+                      type="radio"
+                      id="fishAdult"
+                      name="fishAge"
+                      value="fishAdult"
+                    />
+                    <label for="fishAdult">Adult</label>
+                  </div>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Add To Cart" />
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <footer>
-            <div id="validCSS">
-                <p>
-                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                        <img style="border:0;width:88px;height:31px"
-                            src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
-                    </a>
-                </p>
-            </div>
-            <div id="contact">
-                <h3>Contact Us</h3>
-                <p>
-                    <a
-                        href="mailto:info@petsrus.com?cc=jasper.star@outlook.com&subject=Inquiry&body=Dear%20Pets%20R%20Us,">info@petsrus.com</a><br>
-                    <a href="tel:0742069420">07 4206 9420</a>
-                </p>
-            </div>
-            <div id="motto">
-                <h3>Our Motto</h3>
-                <p>We are on a mission<br>to give every potential<br>pet a fur-ever family.</p>
-            </div>
-            <div id="visit">
-                <h3>Visit Us</h3>
-                <p>
-                    <a href="https://www.google.com/maps/place/Queensland" target="_blank">314 Awesome Ave,<br>
-                        Cloudy Cove, QLD, 1772</a>
-                </p>
-            </div>
-        </footer>
+      </div>
+      <footer id="pageFooter"></footer>
     </div>
-</body>
-
+  </body>
 </html>
