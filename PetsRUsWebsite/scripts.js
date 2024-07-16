@@ -32,7 +32,6 @@ void (async function () {
   if (filename == "") {
     filename = "index.html";
   }
-  console.log(filename);
   // Get all nav links
   const navItems = document.querySelectorAll(".flexNav li a, .cartNav li a");
 
