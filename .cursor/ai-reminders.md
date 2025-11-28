@@ -1,0 +1,13 @@
+# AI Assistant Reminders
+
+## Terminal Working Directory
+**IMPORTANT**: Always run project-specific commands from the project root directory using the absolute path.
+
+**Project Root**: `E:\Code Projects\jasperstar.com`
+
+When running commands like `git status`, `npm install`, or any project-specific commands, ensure you're in the correct directory by either:
+1. Using `cd "E:\Code Projects\jasperstar.com" && [command]`
+2. Or verifying the current working directory is correct before running commands
+
+This is necessary because the AI assistant tool may not always default to the workspace root, even with `.vscode/settings.json` configured.
+
