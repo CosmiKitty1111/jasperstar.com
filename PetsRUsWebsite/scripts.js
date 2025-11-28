@@ -4,7 +4,25 @@ void (async function () {
   let templatesPath = "templates.html";
   let currentPath = window.location.pathname;
   // If we're in a subfolder (adopt/, food/, cart/), use ../templates.html
-  if (currentPath.split("/").filter(Boolean).length > 2) {
+  // Check if we're in a subdirectory by examining the path structure
+  let pathSegments = currentPath.split("/").filter(Boolean);
+  // Check if we're in a subdirectory:
+  // - If path contains "PetsRUsWebsite" and has segments after it, we're in a subdirectory
+  // - If path doesn't contain "PetsRUsWebsite" but has segments, we might be serving from PetsRUsWebsite root
+  let petsRUsIndex = pathSegments.indexOf("PetsRUsWebsite");
+  let isInSubfolder = false;
+  
+  if (petsRUsIndex >= 0) {
+    // We're in a path like /PetsRUsWebsite/food/
+    isInSubfolder = pathSegments.length > petsRUsIndex + 1;
+  } else {
+    // We might be serving from PetsRUsWebsite as root (e.g., /food/)
+    // Check if we have any segments (not at root) and not at index
+    let lastSegment = pathSegments[pathSegments.length - 1] || "";
+    isInSubfolder = pathSegments.length > 0 && lastSegment !== "index.html" && lastSegment !== "";
+  }
+  
+  if (isInSubfolder) {
     templatesPath = "../templates.html";
   }
   
@@ -19,8 +37,7 @@ void (async function () {
   let footerClone = footer.content.cloneNode(true);
 
   // Fix template links based on current page location
-  // Determine if we're in a subfolder (adopt/, food/, cart/)
-  let isInSubfolder = currentPath.split("/").filter(Boolean).length > 2;
+  // isInSubfolder already determined above
   let basePath = isInSubfolder ? "../" : "";
   
   // Update all links in header (relative to PetsRUsWebsite root)
@@ -71,8 +88,8 @@ void (async function () {
   // Get current page URL
   let url = window.location.pathname;
   // Remove trailing slash and get the last segment
-  let pathSegments = url.replace(/\/$/, "").split("/").filter(Boolean);
-  let currentPage = pathSegments[pathSegments.length - 1] || "";
+  let urlPathSegments = url.replace(/\/$/, "").split("/").filter(Boolean);
+  let currentPage = urlPathSegments[urlPathSegments.length - 1] || "";
   
   // If we're at root or index, set to empty string for home
   if (currentPage === "" || currentPage === "index.html" || currentPage === "PetsRUsWebsite") {

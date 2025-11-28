@@ -3,71 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <script>
-        // GitHub Pages 404.html routing handler
-        (function() {
-            var path = window.location.pathname;
-            var search = window.location.search;
-            var hash = window.location.hash;
-            
-            // Remove leading/trailing slashes and handle index
-            path = path.replace(/^\/+|\/+$/g, '');
-            
-            // If path is empty or ends with /, it's the root
-            if (!path || path.endsWith('/')) {
-                // Check if we're in a subdirectory
-                var segments = path.split('/').filter(Boolean);
-                if (segments.length > 0) {
-                    // Remove last segment if it's empty (trailing slash)
-                    if (path.endsWith('/')) {
-                        segments.pop();
-                    }
-                    var basePath = segments.join('/');
-                    window.location.replace('/' + basePath + '/index.html' + search + hash);
-                } else {
-                    window.location.replace('/index.html' + search + hash);
-                }
-                return;
-            }
-            
-            // Remove .html if present
-            path = path.replace(/\.html$/, '');
-            
-            // Remove 'index' from the end if present
-            path = path.replace(/\/index$/, '/');
-            path = path.replace(/^index$/, '');
-            
-            // Split path into segments
-            var segments = path.split('/').filter(Boolean);
-            
-            // Build the redirect path
-            var redirectPath = '';
-            if (segments.length > 0) {
-                var lastSegment = segments[segments.length - 1];
-                var basePath = segments.slice(0, -1).join('/');
-                
-                // Check if the file exists (try .html extension)
-                var testPath = '/' + path + '.html';
-                if (basePath) {
-                    testPath = '/' + basePath + '/' + lastSegment + '.html';
-                }
-                
-                redirectPath = testPath;
-            } else {
-                redirectPath = '/index.html';
-            }
-            
-            // Add search and hash
-            redirectPath += search + hash;
-            
-            // Redirect
-            window.location.replace(redirectPath);
-        })();
-    </script>
+    <title>Page Not Found</title>
 </head>
 <body>
-    <p>Redirecting...</p>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you're looking for doesn't exist.</p>
+    <p><a href="/">Return to Home</a></p>
 </body>
 </html>
 

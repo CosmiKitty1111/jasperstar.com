@@ -1,3 +1,4 @@
+# IDE and Editor files
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -5,8 +6,60 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+# Cursor IDE files (may contain tokens/secrets)
+.cursor/
+!.cursor/rules/
+
 # Local History for Visual Studio Code
 .history/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Environment and secret files
+.env
+.env.local
+.env.*.local
+*.env
+secrets.json
+config.local.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+.cache/
+
+# Build artifacts (if any)
+dist/
+build/
+*.min.js.map
+*.min.css.map
+
+# Node modules (if using npm/node)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Backup files
+*.bak
+*.backup
+*_backup
+*.old
