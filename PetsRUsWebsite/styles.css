@@ -63,8 +63,15 @@ p {
   text-align: center;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
   background-color: yellowgreen;
+  overflow: hidden;
 }
 
 #wrapper {
@@ -75,6 +82,21 @@ body {
   color: black;
   background-color: burlywood;
   border: #129912 groove 20px;
+  max-height: 100vh;
+  max-height: 100svh; /* Small viewport height - accounts for browser UI */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 header {
@@ -82,6 +104,7 @@ header {
   border: #111 solid;
   padding: 15px 15px;
   margin: 0 100px 20px 100px;
+  flex-shrink: 0;
 }
 
 /* ------------------------ Navbar ------------------------ */
@@ -144,6 +167,7 @@ footer {
   align-content: flex-start;
   align-items: flex-start;
   justify-content: space-evenly;
+  flex-shrink: 0;
 }
 
 footer div {
