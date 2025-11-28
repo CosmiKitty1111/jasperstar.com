@@ -1,8 +1,40 @@
 void (async function () {
+  // -- Redirect .html URLs to clean URLs (works on both GitHub Pages and IIS local) --
+  // Check if current URL contains .html (except 404.html), including cases with trailing slashes
+  // Note: IIS local also has server-side redirects in web.config, but this provides client-side fallback
+  let currentPath = window.location.pathname;
+  // Normalize path: remove trailing slash for processing, but remember if it had one
+  let hadTrailingSlash = currentPath.endsWith("/");
+  let pathForCheck = currentPath.replace(/\/$/, "");
+  
+  // Check if path ends with .html (with or without trailing slash)
+  if (pathForCheck.endsWith(".html") && !pathForCheck.endsWith("404.html")) {
+    let cleanPath;
+    // If path ends with index.html, redirect to parent directory
+    if (pathForCheck.endsWith("/index.html") || pathForCheck === "/index.html" || pathForCheck.endsWith("index.html")) {
+      cleanPath = pathForCheck.replace(/\/?index\.html$/, "");
+      // Ensure trailing slash for directory URLs (except root)
+      if (cleanPath && cleanPath !== "/" && !cleanPath.endsWith("/")) {
+        cleanPath += "/";
+      }
+      // If we're at root, ensure it's just "/"
+      if (!cleanPath || cleanPath === "") {
+        cleanPath = "/";
+      }
+    } else {
+      // Remove .html extension for other .html files
+      cleanPath = pathForCheck.replace(/\.html$/, "");
+    }
+    // Preserve query string and hash
+    let newUrl = cleanPath + window.location.search + window.location.hash;
+    // Use replace to avoid adding to browser history
+    window.location.replace(newUrl);
+    return; // Stop execution since we're redirecting
+  }
+  
   // -- Add section templates to the page --
   // Determine templates.html path based on current location
   let templatesPath = "templates.html";
-  let currentPath = window.location.pathname;
   // If we're in a subfolder (adopt/, food/, cart/), use ../templates.html
   // Check if we're in a subdirectory by examining the path structure
   let pathSegments = currentPath.split("/").filter(Boolean);
@@ -14,12 +46,19 @@ void (async function () {
   
   if (petsRUsIndex >= 0) {
     // We're in a path like /PetsRUsWebsite/food/
-    isInSubfolder = pathSegments.length > petsRUsIndex + 1;
+    // We're in a subfolder if:
+    // - We have more than 2 segments (e.g., ["PetsRUsWebsite", "food", "index.html"])
+    // - OR we have exactly 2 segments but the last one is not "index.html" (e.g., ["PetsRUsWebsite", "food"])
+    let lastSegment = pathSegments[pathSegments.length - 1] || "";
+    isInSubfolder = pathSegments.length > petsRUsIndex + 2 || 
+                    (pathSegments.length === petsRUsIndex + 2 && lastSegment !== "index.html");
   } else {
     // We might be serving from PetsRUsWebsite as root (e.g., /food/)
-    // Check if we have any segments (not at root) and not at index
-    let lastSegment = pathSegments[pathSegments.length - 1] || "";
-    isInSubfolder = pathSegments.length > 0 && lastSegment !== "index.html" && lastSegment !== "";
+    // Check if we have multiple path segments (indicating a subfolder)
+    // Examples: /food/index.html has 2 segments, /food/ has 1 segment, /index.html has 1 segment
+    // If we have more than 1 segment, we're definitely in a subfolder
+    // If we have exactly 1 segment and it's not "index.html", we're in a subfolder
+    isInSubfolder = pathSegments.length > 1 || (pathSegments.length === 1 && pathSegments[0] !== "index.html" && pathSegments[0] !== "");
   }
   
   if (isInSubfolder) {
