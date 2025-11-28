@@ -1,0 +1,65 @@
+---
+alwaysApply: true
+---
+
+
+# Project Structure Rules
+
+## Page Structure Convention
+
+All pages in this project must follow a consistent folder-based structure:
+
+### Rule: Pages Must Use Folder Structure with index.html
+
+**Structure Pattern:**
+- Each page/section should be in its own folder
+- The folder should contain an `index.html` file
+- The folder name becomes the URL path (without `/index.html`)
+
+**Examples:**
+- ✅ `404/index.html` → accessible at `/404/`
+- ✅ `PetsRUsWebsite/food/index.html` → accessible at `/PetsRUsWebsite/food/`
+- ✅ `PetsRUsWebsite/adopt/index.html` → accessible at `/PetsRUsWebsite/adopt/`
+- ✅ `PetsRUsWebsite/cart/index.html` → accessible at `/PetsRUsWebsite/cart/`
+- ✅ Root `index.html` → accessible at `/` (exception for root)
+
+**Exceptions:**
+- Root `index.html` is allowed at the repository root for the main landing page
+- `404.html` at root is required for GitHub Pages compatibility (but should redirect to `/404/`)
+
+**Why:**
+- Consistent URL structure (clean URLs without `.html` extensions)
+- Easier to organize related assets per page
+- Matches modern web development practices
+- Works seamlessly with URL rewriting rules
+
+**When Creating New Pages:**
+1. Create a folder with the page name (e.g., `about/`, `contact/`)
+2. Create `index.html` inside that folder
+3. Update URL rewrite rules if needed
+4. Ensure relative paths are correct for assets
+
+## Git Workflow Rules
+
+### Production Branch Name
+- **ALWAYS** use `release/prod` (not `Prod`, `prod`, or any other variation)
+- The production branch is `release/prod` - this is case-sensitive and must include the `release/` prefix
+- If I refer to a branch as `prod` I mean `release/prod`.
+
+### Pull Requests and Merges
+- **ALWAYS** use GitHub MCP tools for creating pull requests and merging
+- **NEVER** use direct git merge commands for cross-branch merges
+- Use `mcp_GitHub_-_CosmiKitty1111_create_pull_request` to create PRs
+- Use `mcp_GitHub_-_CosmiKitty1111_merge_pull_request` to merge PRs
+- This ensures proper PR tracking, code review visibility, and GitHub workflow integration
+
+**Workflow Pattern:**
+1. Commit and push changes to feature branch
+2. Create PR from feature branch to master using MCP
+3. Merge PR using MCP
+4. Create PR from master to `release/prod` using MCP
+5. Merge PR using MCP
+
+### Note
+- Never commit straight to master or release/prod. Always create/use a feature, bugfix or simlarly prefixed branch first, then pull request into master using GitHub MCP tools
+
