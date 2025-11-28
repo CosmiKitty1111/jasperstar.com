@@ -60,6 +60,17 @@ All pages in this project must follow a consistent folder-based structure:
 4. Create PR from master to `release/prod` using MCP
 5. Merge PR using MCP
 
+### Production Workflow
+The standard production workflow follows this pattern:
+- **Feature Branch → Master → Production**
+- Always use feature/bugfix branches (never commit directly to master or release/prod)
+- Use verbose commit message
+- Create pull requests using GitHub MCP tools (not direct git merges)
+- After merging to master, immediately create and merge a PR to `release/prod` to deploy to production
+- This ensures proper code review, PR tracking, and deployment visibility
+
+**Quick Command:** To trigger the full production workflow, use: `"do my standard prod workflow"` or `"run prod workflow"`
+
 ### Note
 - Never commit straight to master or release/prod. Always create/use a feature, bugfix or simlarly prefixed branch first, then pull request into master using GitHub MCP tools
 
