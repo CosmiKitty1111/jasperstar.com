@@ -1,26 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100svh;
+    height: 100vh; /* Fallback for browsers that don't support svh */
+    overflow: hidden;
+}
+
 body {
     background-color: green;
-    margin: 0;
 }
 
 .wrapper {
     display: flex;
-    margin-left: 20%;
-    margin-right: 20%;
     flex-direction: column;
+    width: 50%;
+    max-width: 60%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 header,
 footer {
     background-color: orange;
     height: 42px;
+    flex-shrink: 0;
 }
 
 .main {
     background-color: beige;
-    margin-top: 0;
-    margin-bottom: 0;
-    min-height: calc(100vh - 84px);
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
